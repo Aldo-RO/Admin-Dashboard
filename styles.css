@@ -1,0 +1,311 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: 'caviar_dreamsregular';
+    src: url('fonts/caviardreams-webfont.woff2') format('woff2'),
+         url('fonts/caviardreams-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'caviar_dreamsbold';
+    src: url('fonts/caviar_dreams_bold-webfont.woff2') format('woff2'),
+         url('fonts/caviar_dreams_bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+.container {
+    font-family: 'caviar_dreamsregular';
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 0.75fr 4fr;
+}
+
+.header {
+    grid-column: 2 / 5;
+    grid-row: 1;
+    background-color: lightgreen;
+
+    display: grid;
+    grid-template: 0.25fr 0.75fr / 1.75fr 1.25fr;
+
+    box-shadow: 0em 1em black;
+}
+
+.searchbar > input {
+    width: 95%;
+    background-color: aqua;
+    border: none;
+    border-radius: 0.5em;
+    font-size: 1em;
+}
+
+.searchbar > input:focus {
+    transition: 0.25s;
+    background-color: chartreuse;
+    border: 3px solid darkblue;
+    outline: none;
+}
+
+.searchbar {
+    display: flex;
+    place-items: center;
+    padding-left: 1em;
+    padding-top: 0.75em;
+}
+
+.notifications {
+    display: flex;
+    place-items: center;
+    gap: 2em;
+    justify-content: end;
+    padding-right: 8em;
+    padding-top: 1em;
+}
+
+.notifications > img:hover, .notifications > h3:hover {
+    border: 2px solid blue;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.title {
+    display: flex;
+    gap: 1em;
+    padding-left: 2em;
+    padding-bottom: 2.5em;
+}
+
+.greet {
+    place-content: center;
+}
+
+.buttons {
+    display: flex;
+    place-items: center;
+    padding-left: 1.5em;
+    gap: 1em;
+}
+
+.buttons > * {
+    width: 7.5em;
+    height: 2.5em;
+    border-radius: 1em;
+    background-color: aqua;
+    font-size: 1em;
+    border: 2px solid darkblue;
+}
+
+button:hover {
+    background-color: chartreuse;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.lsidebar {
+    grid-column: 1;
+    grid-row: 1 / 3;
+    background-color: blue;
+    color: white;
+}
+
+.logo:hover, .option:hover {
+    cursor: pointer;
+    font-family: 'caviar_dreamsbold';
+}
+
+.logo, .option {
+    display: flex;
+    place-items: center;
+    font-weight: bolder;
+    gap: 1em;
+    padding-left: 1em;
+}
+
+.logo, .optiong1, .optiong2 {
+    padding-top: 5em;
+}
+
+.not-an-exception {
+    padding: 0.5em 0;
+}
+
+.rside {
+    display: grid;
+
+    background-color: rgba(0, 255, 255, 0.75);
+}
+
+.projects {
+    grid-column: 2 / 4;
+    grid-row: 2;
+
+    padding-left: 1em;
+}
+
+.list {
+    display: grid;
+    grid-template-columns: repeat(2, 18em);
+    gap: 1em;
+    font-size: 1.25em;
+}
+
+.card {
+    border-radius: 1em;
+    height: 13em;
+    padding: 1em;
+    background-image: linear-gradient(to right, red 4%, chartreuse 4%);
+    box-shadow: 0.5em 1em 0.5em darkcyan;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card:hover {
+    box-shadow: 0 0 3em red;
+    transition: 0.5s;
+}
+
+.imgs {
+    display: flex;
+    justify-content: end;
+    gap: 1em;
+}
+
+.imgs > img:hover {
+    cursor: pointer;
+}
+
+.bold {
+    font-weight: bolder;
+    padding-bottom: 0.5em;
+}
+
+.bold:hover {
+    cursor: pointer;
+    font-family: 'caviar_dreamsbold';;
+}
+
+.rsidebar {
+    grid-column: 4 / 5;
+    grid-row: 2;
+    display: grid;
+    gap: 1em;
+    padding-left: 1.5em;
+
+    padding-bottom: 5em;
+}
+
+.announcements {
+    border: 1px solid black;
+    border-radius: 1em;
+    padding: 1em;
+    margin-right: 6em;
+    display: grid;
+    grid-template-columns: 15em;
+    gap: 1em;
+
+    background-color: chartreuse;
+    box-shadow: 0.5em 1em 0.5em darkcyan;
+}
+
+.announcements:hover {
+    box-shadow: 0 0 3em blue;
+    transition: 0.5s;
+}
+
+.announcement > .info {
+    padding-bottom: 1em;
+    border-bottom: 1px solid black;
+}
+
+.ofni {
+    border: none;
+}
+
+.exception {
+    padding-bottom: 0.5em;
+}
+
+.users {
+    border: 1px solid black;
+    border-radius: 1em;
+    padding: 1em;
+    margin-right: 6em;
+    background-color: chartreuse;
+
+    box-shadow: 0.5em 1em 0.5em darkcyan;
+}
+
+.users:hover {
+    box-shadow: 0 0 3em blue;
+    transition: 0.5s;
+}
+
+.user {
+    display: flex;
+    gap: 1em;
+    padding-bottom: 1em;
+}
+
+.user:hover {
+    font-family: 'caviar_dreamsbold';
+    cursor: pointer;
+}
+
+.user > img:hover {
+    border: solid 3px blue;
+}
+
+/*Image Sizing. YEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEAHHHHHHHHHHHHHHH!!!!!!!!!!!!!!!!!!!!!!!*/
+
+.searchbar > img {
+    width: 1.5em;
+    height: 1.5em;
+}
+
+.notifications > :first-child {
+    width: 1.5em;
+    height: 1.5em;
+}
+
+.notifications > :nth-child(2) {
+    width: 3em;
+    height: 3em;
+    border-radius: 10em;
+}
+
+.title > img {
+    width: 6em;
+    height: 6em;
+    border-radius: 10em;
+}
+
+.logo > img {
+    width: 5em;
+    height: 5em;
+}
+
+.option > img {
+    width: 3em;
+    height: 3em;
+}
+
+.user > img {
+    width: 3em;
+    height: 3em;
+    border-radius: 10em;
+}
+
+.imgs > img {
+    width: 1.5em;
+    height: 1.5em;
+}
